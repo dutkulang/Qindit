@@ -6,3 +6,5 @@
     django 5
     HTML & CSS
     pillow (image processing)
+
+
