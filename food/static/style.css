@@ -81,3 +81,10 @@ input[type="text"]{
     font-weight:lighter;
     font-size: 14px;
 }
+a{
+    text-decoration: none;
+    color:#000;
+}
+.item-image{
+    width: 360px;
+}

@@ -4,8 +4,15 @@
             <ul class="navbar-nav">
                 <li>Restraunants</li>
                 <li>Food</li>
-                <li>Join</li>
-                <button class="btn">Login</button>
+                {% if not user.is_authenticated %}
+                <li class="btn signup"><a href="{% url 'signup' %}">Sign up now</a></li>
+                <li class="btn"><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                <li class="btn"><a href="{% url 'logout' %}">logout</a></li>
+                {% endif %}
+                
             </ul>
         </nav>
     </header>

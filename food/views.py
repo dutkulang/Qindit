@@ -15,3 +15,9 @@ def foodItems(request):
         "foodItems": models.MenuItem.objects.all()
     }
     return render(request, 'foods.html', context )
+
+def foodItem(request, itemId):
+    context= {
+        'food': models.MenuItem.objects.filter(pk=itemId).first()
+    }
+    return render(request, 'food.html', context)

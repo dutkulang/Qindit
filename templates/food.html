@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block main %}
+    
+<div class="item-image">
+    <img src= "{{ food.image.url }}" alt="">
+</div>
+
+<h1>{{food.name}}</h1>
+<p>{{food.description}}</p>  
+{% endblock main %}

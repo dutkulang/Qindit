@@ -4,16 +4,26 @@
 <div class="container">
     {% for foodItem in foodItems %}
 
-        <div class="food-card">
-            <img src= "{{ foodItem.image.url }}"
-            alt="">
-            <div class="food-info">
-                <h3>{{foodItem.name}}</h3>
-                <p class="description">{{foodItem.description}}</p>
-                <p>ssp {{foodItem.price}}</p>
-                <button>Add</button>
+        <a href="{{foodItem.id}}">
+            <div class="food-card">
+                <img src= "{{ foodItem.image.url }}"
+                alt="">
+                <div class="food-info">
+                    <h3>{{foodItem.name}}</h3>
+                    <p class="description">{{foodItem.description}}</p>
+                    <p>ssp {{foodItem.price}}</p>
+                    <p>
+                        {% if foodItem.is_available %}
+                        available
+                        {% else %}
+                        Not available
+                        {% endif %}
+                    </p>
+                    <p>{{foodItem.restaurant}}</p>
+                    <button>Order</button>
+                </div>
             </div>
-        </div>
+        </a>
     {% endfor %}
 </div>
 {% endblock main %}

@@ -11,12 +11,7 @@
 <body>
   {% include "header.html" %}
   {% include "search-bar.html" %}
-  {% if restaurants %}
-
-    {% for restaurant in restaurants %}
-        <h1>{{restaurant}}</h1>
-    {% endfor %}
-  {% endif %}
+ 
   {% block main %}
   
   {% endblock main %}
