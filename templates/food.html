@@ -5,6 +5,8 @@
     <img src= "{{ food.image.url }}" alt="">
 </div>
 
-<h1>{{food.name}}</h1>
-<p>{{food.description}}</p>  
+<h1>{{food.name}} - ssp {{food.price }}</h1>
+<p>{{food.restaurant }}</p>
+<p>{{food.description}}</p>
+<button class="checkout-btn">Checkout now</button>  
 {% endblock main %}

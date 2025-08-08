@@ -19,6 +19,7 @@ header{
     justify-content: space-between;
     padding:1rem 0rem;
     align-items: center;
+    border-bottom: 2px solid #3d3d3d;
     
 }
 #site-title{
@@ -87,4 +88,23 @@ a{
 }
 .item-image{
     width: 360px;
+}
+.checkout-btn{
+    background-color: #000;
+    color:#ccc;
+    outline: none;
+    font-weight: 500;
+    /* height: 22px; */
+    border: none;
+    padding: .8rem;
+    cursor: pointer;
+}
+.logout-btn{
+    cursor: pointer;    
+    background-color: rgb(159, 38, 38);
+    
+}
+.logout-btn > a{
+color: #fff;
+padding: 14px;
 }

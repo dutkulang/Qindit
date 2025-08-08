@@ -1,5 +1,5 @@
 <header>
-        <span id="site-title">Qindit</span>
+        <a href="/" id="site-title">Qindit</a>
         <nav>
             <ul class="navbar-nav">
                 <li>Restraunants</li>
@@ -10,7 +10,7 @@
                 {% endif %}
 
                 {% if user.is_authenticated %}
-                <li class="btn"><a href="{% url 'logout' %}">logout</a></li>
+                <li class="logout-btn"><a href="{% url 'logout' %}">logout</a></li>
                 {% endif %}
                 
             </ul>
