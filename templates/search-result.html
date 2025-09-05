@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+{% block main %}
+<h1>Search Results for "{{ query }}"</h1>
+{% for food in foods %}
+    <a href="{% url 'foodItem' food.id  %}" class="food-card">
+    <h2>{{ food.name }}</h2>
+    <p>{{ food.description|truncatewords:50 }}</p>
+    </a>
+{% empty %}
+    <p>No results found.</p>
+{% endfor %}
+{% endblock main %}
